@@ -3,10 +3,10 @@ using System.Runtime.CompilerServices;
 
 namespace SearchingAndSortingTask
 {
-
+    
     internal class Program
     {
-        public static bool alreadySorted;
+       public static bool alreadySorted;
         public static bool dataCreated;
 
 
@@ -23,7 +23,7 @@ namespace SearchingAndSortingTask
             dataCreated = false;
             Random rng = new Random();
             runCompare(rng);
-
+            
         }
         /* You can change this to add more features if you want */
         static void menu()
@@ -45,14 +45,14 @@ namespace SearchingAndSortingTask
          * that are set
          * all tasks are written as comments in the code
         */
-
+       
         static void runCompare(Random r)
         {
             int[] a = null;
             int size = 1;
             Stopwatch sw = new Stopwatch();
             int menuChoice;
-
+            
             do
             {
                 sw.Reset();
@@ -62,7 +62,7 @@ namespace SearchingAndSortingTask
                 switch (menuChoice)
                 {
                     /* You don't need to change this one */
-                    case 1:
+                    case 1: 
                         Console.Write("Enter size of array to work with: ");
                         size = Convert.ToInt32(Console.ReadLine());
                         a = CreateArray(size, r);
@@ -95,7 +95,7 @@ namespace SearchingAndSortingTask
         }
 
         /* Do not change this, it will create an array of random numbers for you to use */
-        static int[] CreateArray(int size, Random r)
+        static int[] CreateArray(int size, Random r)  
         {
             int[] array = new int[size];
             for (int i = 0; i < size; i++)
@@ -104,7 +104,7 @@ namespace SearchingAndSortingTask
             }
             return array;
         }
-
+        
 
         static void BubbleSort(int[] a)
         {
